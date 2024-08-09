@@ -250,6 +250,9 @@ section{
     box-shadow: 0 0 10px 2px rgba(255,72,72,0.8);
     transition: 0.3s ease;
 }
+.area button a{
+    color:whitesmoke;
+}
 @media(max-width:1000px){
     .home{
         gap:4rem;

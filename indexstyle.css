@@ -159,6 +159,9 @@ span{
 .aboutme h2{
     font-size: 30px;
 }
+.aboutme h2 a{
+    color:rgba(255,72,72,0.8);
+}
 @keyframes rotate {
     to{
         transform:rotateY(360deg);

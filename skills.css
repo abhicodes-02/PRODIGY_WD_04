@@ -102,6 +102,7 @@ svg{
     border: 2px solid whitesmoke;
     font-size:20px;
     border-spacing: 3px;
+    cursor: pointer;
 }
 th{
     font-size:30px;
