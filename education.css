@@ -1,0 +1,363 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border:none;
+    outline:none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+html{
+    font-size:62.5%;
+    text-align: center;
+}
+body{
+    width:100%;
+    height: 110vh;
+    overflow-x: hidden;
+    background-color: black;
+    color:white;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:3rem 9%;
+    background-color: black;
+    filter:drop-shadow(10px);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+}
+.logo{
+    color:white;
+    font-size:3rem;
+    font-weight: 800;
+    cursor:pointer;
+    transition:0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logo span{
+    color:red;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color:whitesmoke;
+    margin-left:3rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom:3px solid transparent;
+}
+nav a:hover{
+    font-size: 1.8rem;
+    color:rgb(250, 5, 5);
+    margin-left:3rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom:3px solid red;
+}
+nav .active{
+    font-size: 1.8rem;
+    color:rgb(250, 5, 5);
+    margin-left:3rem;
+    font-weight: 500;
+    border-bottom:3px solid red;
+}
+.links-container{
+    height: 100%;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+svg{
+    fill: aliceblue;
+    cursor:pointer;
+}
+section{
+    min-height:100vh;
+    padding:5rem 9%;
+}
+#sidebar-active{
+    display:none;
+}
+.opensidebarbutton,.closesidebarbutton{
+      display:none;
+}
+.title{
+     font-size: 50px;
+}
+.home{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    top:-30%;
+    gap:8rem;
+    background-color: black;
+    z-index: -1;
+}
+.home span{
+    color:rgba(255,45,42,0.7);
+}
+.colleges{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    position:relative;
+    top:-65%;
+    gap:50px;
+}
+.colleges .masters h1{
+    font-size: 30px;
+}
+.colleges .masters h2{
+    font-size: 20px;
+}
+.colleges .masters button{
+    font-size: 30px;
+    color:white;
+    background:transparent;
+    border-radius: 10px;
+    border:3px solid rgba(255,72,72,0.8);
+    cursor:pointer;
+}
+.colleges .masters button:hover{
+    color:black;
+    background-color: rgba(255,72,72,0.8);
+    transition: 0.3s ease;
+}
+.colleges .bachelors h1{
+    font-size: 30px;
+}
+.colleges .bachelors h2{
+    font-size: 20px;
+}
+.colleges .bachelors button{
+    font-size: 30px;
+    color:white;
+    background:transparent;
+    border-radius: 10px;
+    border:3px solid rgba(255,72,72,0.8);
+    cursor:pointer;
+}
+.colleges .bachelors button:hover{
+    color:black;
+    background-color: rgba(255,72,72,0.8);
+    transition: 0.3s ease;
+}
+.colleges .school h1{
+    font-size: 30px;
+}
+.masters{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+.colleges .masters .area button{
+    margin-left: 18%;
+    font-size:16px;
+    width:60%;
+    height:50px;
+    background-color: transparent;
+    color:rgba(255,72,72,0.8);
+    border:2px solid rgba(255,72,72,0.8);
+    box-shadow: 0 0 20px 2px rgba(255,72,72,0.8);
+    font-weight:600;
+    cursor:pointer;
+}
+.colleges .masters .area  button:hover{
+    font-size:18px;
+    color:whitesmoke;
+    box-shadow: 0 0 10px 2px rgba(255,72,72,0.8);
+    transition: 0.3s ease;
+}
+.area{
+    display:flex;
+    flex-direction: column;
+}
+.Tiu{
+    width:30vw;
+    height:50vh;
+    margin-left:10%;
+}
+.bachelors{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+}
+.Tmsl{
+    width:30vw;
+    height:50vh;
+    margin-left:10%;
+}
+.colleges .bachelors .area button{
+    margin-left: 18%;
+    font-size:16px;
+    width:60%;
+    height:50px;
+    background-color: transparent;
+    color:rgba(255,72,72,0.8);
+    border:2px solid rgba(255,72,72,0.8);
+    box-shadow: 0 0 20px 2px rgba(255,72,72,0.8);
+    font-weight:600;
+    cursor:pointer;
+}
+.colleges .bachelors .area  button:hover{
+    font-size:18px;
+    color:whitesmoke;
+    box-shadow: 0 0 10px 2px rgba(255,72,72,0.8);
+    transition: 0.3s ease;
+}
+.school{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: center;
+    margin-bottom:2%;
+}
+.carmel{
+    width:30vw;
+    height:50vh;
+    margin-left: 16%;
+}
+.colleges .school .area button{
+    margin-left:25%;
+    font-size:16px;
+    width:50%;
+    height:50px;
+    background-color: transparent;
+    color:rgba(255,72,72,0.8);
+    border:2px solid rgba(255,72,72,0.8);
+    box-shadow: 0 0 20px 2px rgba(255,72,72,0.8);
+    font-weight:600;
+    cursor:pointer;
+}
+.colleges .school .area  button:hover{
+    font-size:18px;
+    color:whitesmoke;
+    box-shadow: 0 0 10px 2px rgba(255,72,72,0.8);
+    transition: 0.3s ease;
+}
+@media(max-width:1000px){
+    .home{
+        gap:4rem;
+    }
+}
+@media(max-width:850px){
+    body{
+        height:110vh;
+    }
+    .home{
+        flex-direction: column;
+        margin:5rem 4rem;
+        top:-35%;
+    }
+    .links-container{
+        display:none;
+        flex-direction: column;
+        align-items: flex-start;
+        position:fixed;
+        top:0;
+        right:0;
+        z-index:10;
+        width:200px;
+        background-color: rgba(1, 1, 1, 0.9);
+        box-shadow: -5px 0 5px rgb(251, 129, 129);
+    }
+    nav a{
+        box-sizing:border-box;
+        height:auto;
+        width:10%;
+        padding:30px 5px;
+        justify-content: flex-start;
+    }
+    .opensidebarbutton,.closesidebarbutton{
+        display:block;
+    }
+    #sidebar-active:checked~.links-container{
+        display:flex;
+    }
+    section .degree{
+        font-size:25px;
+    }
+    .colleges{
+        position:relative;
+        top:-75%;
+    }
+    .masters,.bachelors,.school{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .Tiu,.carmel{
+        width:100%;
+        height:50vh;
+        margin-left:0;
+    }
+    .Tmsl{
+        width:100%;
+        height:50vh;
+        margin-left:0;
+    }
+    .school{
+        margin-bottom: 5%;
+    }
+}
+@media(max-width:650px){
+    .home{
+        flex-direction: column;
+        margin:5rem 4rem;
+    }
+    .title{
+        font-size: 35px;
+   }
+   .colleges .masters h1{
+    font-size: 20px;
+}
+.colleges .masters h2{
+    font-size: 10px;
+}
+.colleges .masters button{
+    font-size: 15px;
+    border-radius: 5px;
+}
+.colleges .bachelors h1{
+    font-size: 20px;
+}
+.colleges .bachelors h2{
+    font-size: 10px;
+}
+.colleges .bachelors button{
+    font-size: 15px;
+    border-radius: 5px;
+}
+.colleges .school h1{
+    font-size: 20px;
+}
+.colleges .school button{
+    font-size: 15px;
+    border-radius: 5px;
+}
+.Tiu,.carmel{
+    width:90%;
+    height:40vh;
+    margin-left:0;
+}
+.Tmsl{
+    width:90%;
+    height:45vh;
+    margin-left:0;
+}
+}

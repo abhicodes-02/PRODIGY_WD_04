@@ -1,0 +1,233 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border:none;
+    outline:none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+html{
+    font-size:62.5%;
+    text-align: center;
+}
+body{
+    width:100%;
+    height: 108vh;
+    overflow-x: hidden;
+    background-color: black;
+    color:white;
+}
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:3rem 9%;
+    background-color: black;
+    filter:drop-shadow(10px);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index:100;
+}
+.logo{
+    color:white;
+    font-size:3rem;
+    font-weight: 800;
+    cursor:pointer;
+    transition:0.5s ease;
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+.logo span{
+    color:red;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color:whitesmoke;
+    margin-left:3rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom:3px solid transparent;
+}
+nav a:hover{
+    font-size: 1.8rem;
+    color:rgb(250, 5, 5);
+    margin-left:3rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom:3px solid red;
+}
+nav .active{
+    font-size: 1.8rem;
+    color:rgb(250, 5, 5);
+    margin-left:3rem;
+    font-weight: 500;
+    border-bottom:3px solid red;
+}
+.links-container{
+    height: 100%;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+svg{
+    fill: aliceblue;
+    cursor:pointer;
+}
+section{
+    min-height:100vh;
+    padding:5rem 9%;
+}
+#sidebar-active{
+    display:none;
+}
+.opensidebarbutton,.closesidebarbutton{
+      display:none;
+}
+.title{
+     font-size: 50px;
+}
+.home{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    top:-30%;
+    gap:8rem;
+    background-color: black;
+    z-index: -1;
+}
+.home span{
+    color:rgba(255,45,42,0.7);
+}
+.contact{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    top:-70%;
+}
+.contact form{
+    width:600px;
+    text-align: center;
+}
+form .input-box{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.input-box .input-field{
+    width:100%;
+}
+.field .item{
+    width:100%;
+    padding:18px;
+    background:transparent;
+    outline: none;
+    border:2px solid rgba(248, 6, 1, 0.7);
+    border-radius: 6px;
+    color:whitesmoke;
+    margin:12px 0;
+}
+.field .item::placeholder{
+     color:grey;
+     font-size:14px;
+     font-style: italic;
+     font-weight: bold;
+}
+form .textarea-field .item{
+      resize:none;
+}
+form button{
+    padding:12px 32px;
+    background:rgba(255,72,72,0.8);
+    border:none;
+    outline:none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 2px rgba(255,72,72,0.8);
+    font-size:16px;
+    color:black;
+    letter-spacing:1px;
+    font-weight: 600;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+form button:hover{
+    color:white;
+    box-shadow: none;
+}
+
+@media(max-width:850px){
+    .home{
+        flex-direction: column;
+        margin:5rem 4rem;
+        top:-35%;
+    }
+    .links-container{
+        display:none;
+        flex-direction: column;
+        align-items: flex-start;
+        position:fixed;
+        top:0;
+        right:0;
+        z-index:10;
+        width:200px;
+        background-color: rgba(1, 1, 1, 0.9);
+        box-shadow: -5px 0 5px rgb(251, 129, 129);
+    }
+    nav a{
+        box-sizing:border-box;
+        height:auto;
+        width:10%;
+        padding:30px 5px;
+        justify-content: flex-start;
+    }
+    .opensidebarbutton,.closesidebarbutton{
+        display:block;
+    }
+    #sidebar-active:checked~.links-container{
+        display:flex;
+    }
+    .contact{
+        top:-82%;
+    }
+    .contact form{
+        width:500px;
+        text-align: center;
+    }
+}
+@media(max-width:650px){
+    body{
+        height: 103vh;
+    }
+    .home{
+        flex-direction: column;
+        margin:5rem 4rem;
+    }
+    .title{
+        font-size: 35px;
+   }
+   .contact{
+    top:-82%;
+}
+.contact form{
+    width:300px;
+    text-align: center;
+}
+.field .item{
+    width:100%;
+    padding:10px;
+    margin:12px 0;
+}
+form button{
+    padding:10px 22px;
+}
+}
+
